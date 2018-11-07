@@ -36,6 +36,11 @@ RSpec.describe Ein do
         
           expect(50).to eq(etiqueta.proteinas)
         end
+        
+        it "Debe existir la cantidad de sal" do
+        
+          expect(6).to eq(etiqueta.sal)
+        end
   
 
       end
