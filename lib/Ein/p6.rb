@@ -1,5 +1,5 @@
 class EIN
-   attr_reader :nombre, :grasa_t, :grasa_s, :hidratos_c
+   attr_reader :nombre, :grasa_t, :grasa_s, :hidratos_c, :azucares
    def initialize(nombre,v_energetico, grasa_t, grasa_s, hidratos_c, azucares, proteinas, sal)
        
        @nombre = nombre
@@ -7,6 +7,7 @@ class EIN
        @grasa_t = grasa_t
        @grasa_s = grasa_s
        @hidratos_c = hidratos_c
+       @azucares = azucares
        @proteinas = proteinas
        @sal = sal
    end
