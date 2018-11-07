@@ -31,6 +31,11 @@ RSpec.describe Ein do
         
           expect(90).to eq(etiqueta.azucares)
         end
+        
+        it "Debe existir la cantidad de proteínas" do
+        
+          expect(50).to eq(etiqueta.proteinas)
+        end
   
 
       end
