@@ -26,6 +26,11 @@ RSpec.describe Ein do
         
           expect(260).to eq(etiqueta.hidratos_c)
         end
+        
+        it "Debe existir la cantidad de azúcares" do
+        
+          expect(90).to eq(etiqueta.azucares)
+        end
   
 
       end
