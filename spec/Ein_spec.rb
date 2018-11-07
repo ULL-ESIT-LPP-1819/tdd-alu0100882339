@@ -41,6 +41,15 @@ RSpec.describe Ein do
         
           expect(6).to eq(etiqueta.sal)
         end
+        
+        it "Debe existir un método para obtener el valor energético (Kj)" do 
+        
+          expect(8400).to eq(etiqueta.valor_e_kj)
+        end
+        
+        it "Debe existir un método para obtener el valor energético (Kcal)" do 
+          expect(2000).to eq(etiqueta.valor_e_kc) 
+        end
   
 
       end
