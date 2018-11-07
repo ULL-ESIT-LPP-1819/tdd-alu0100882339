@@ -5,6 +5,4 @@ RSpec::Core::RakeTask.new(:spec)
 
 task :default => :spec
 
-task :spec do
-    sh "ruby -I spec/Ein_spec.rb"
-end
+
