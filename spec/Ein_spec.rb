@@ -11,6 +11,11 @@ RSpec.describe Ein do
         it "Debe existir un nombre para la etiqueta" do
           expect("Galleta").to eq(etiqueta.nombre)
         end
+        
+        it "Debe exitir la cantidad de grasas" do
+          
+          expect(70).to eq(etiqueta.grasa_t)
+        end
   
 
       end
