@@ -50,6 +50,11 @@ RSpec.describe Ein do
         it "Debe existir un método para obtener el valor energético (Kcal)" do 
           expect(1906.0).to eq(etiqueta.valor_e_kc) 
         end
+        
+        it "Debe exisitir un método para obtener las porciones" do
+        
+          expect(2).to eq(etiqueta.porciones)
+        end
   
 
       end
