@@ -4,7 +4,7 @@ RSpec.describe Ein do
   
   
   describe EIN do
-    etiqueta = EIN.new("Galleta",70,20,260,90,50,6)
+    etiqueta = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0)
  
       context "Etiqueta_informacion_n" do
   
@@ -44,11 +44,11 @@ RSpec.describe Ein do
         
         it "Debe existir un método para obtener el valor energético (Kj)" do 
         
-          expect(8400).to eq(etiqueta.valor_e_kj)
+          expect(8010.0).to eq(etiqueta.valor_e_kj)
         end
         
         it "Debe existir un método para obtener el valor energético (Kcal)" do 
-          expect(2000).to eq(etiqueta.valor_e_kc) 
+          expect(1906.0).to eq(etiqueta.valor_e_kc) 
         end
   
 
