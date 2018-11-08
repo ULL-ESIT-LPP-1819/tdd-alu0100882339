@@ -4,7 +4,7 @@ RSpec.describe Ein do
   
   
   describe EIN do
-    etiqueta = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0,2)
+    etiqueta = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0,20, 5)
  
       context "Etiqueta_informacion_n" do
   
@@ -53,7 +53,12 @@ RSpec.describe Ein do
         
         it "Debe exisitir un método para obtener las porciones" do
         
-          expect(2).to eq(etiqueta.porciones)
+          expect(5).to eq(etiqueta.porciones)
+        end
+        
+        it "Debe exisistir un método que muestre la información de la etiqueta" do
+        
+            etiqueta.info
         end
   
 
@@ -62,3 +67,4 @@ RSpec.describe Ein do
     end
  
 end
+

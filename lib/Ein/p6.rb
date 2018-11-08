@@ -1,6 +1,6 @@
 class EIN
-   attr_reader :nombre, :grasa_t, :grasa_s, :hidratos_c, :azucares, :proteinas, :sal, :porciones
-   def initialize(nombre, grasa_t, grasa_s, hidratos_c, azucares, proteinas, sal, porciones)
+   attr_reader :nombre, :grasa_t, :grasa_s, :hidratos_c, :azucares, :proteinas, :sal, :t_porciones, :porciones
+   def initialize(nombre, grasa_t, grasa_s, hidratos_c, azucares, proteinas, sal, t_porciones, porciones)
        
        @nombre = nombre
        @grasa_t = grasa_t
@@ -11,7 +11,9 @@ class EIN
        @sal = sal
        @valor_e_kj = valor_e_kj
        @valor_e_kc = valor_e_kc
+       @t_porciones = t_porciones
        @porciones = porciones
+       @ingesta_recomendada = [8400.0, 2000.0, 70.0, 20.0, 260.0, 90.0, 50.0, 6.0]
        
    end
    
@@ -24,4 +26,11 @@ class EIN
        
        (4.0 * hidratos_c) + (4.0 * proteinas) + (9.0 * grasa_t) + (6.0 * sal)
    end
+   
+   
+       
+       
+   
+   
 end
+
