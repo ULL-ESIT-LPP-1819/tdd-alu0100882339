@@ -4,7 +4,7 @@ RSpec.describe Ein do
   
   
   describe EIN do
-    etiqueta = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0)
+    etiqueta = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0,2)
  
       context "Etiqueta_informacion_n" do
   
