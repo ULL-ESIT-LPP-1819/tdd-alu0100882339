@@ -9,6 +9,9 @@ class EIN
        @azucares = azucares
        @proteinas = proteinas
        @sal = sal
+       @valor_e_kj = valor_e_kj
+       @valor_e_kc = valor_e_kc
+       
    end
    
    def valor_e_kj 
