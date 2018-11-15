@@ -69,6 +69,12 @@ class Lista
         @tail == nil
     
     end
+    
+     
+   
+        
+    
+    
         
         
 end

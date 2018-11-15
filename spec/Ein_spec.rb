@@ -140,6 +140,27 @@ end
         
       end
       
+      it "Método para clasificar la sal de todos los elementos de una lista" do
+      
+      
+      etiqueta_1 = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0,20, 5)
+        etiqueta_2 = EIN.new("Papas",70.0,20.0,260.0,90.0,50.0,20.0,20, 5)
+        etiqueta_3 = EIN.new("Manzana",70.0,20.0,260.0,90.0,50.0,3.0,20, 5)
+        etiqueta_4 = EIN.new("Atún",70.0,20.0,260.0,90.0,50.0,17.0,20, 5)
+        etiqueta_5 = EIN.new("Chocolate",70.0,20.0,260.0,90.0,50.0,4.0,20, 5)
+        
+        lista.set_head(etiqueta_1)
+        lista.set_head(etiqueta_2)
+        lista.set_head(etiqueta_3)
+        lista.set_head(etiqueta_4)
+        lista.set_head(etiqueta_5)
+        
+        
+        expect(true).to eq(lista.clasificar_lista_sal)
+      end
+      
+    
+      
       
     end
   end
