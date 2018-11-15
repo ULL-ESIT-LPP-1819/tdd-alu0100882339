@@ -47,15 +47,19 @@ class EIN
     def clasificar_sal
        
             if (sal <= 5.0)
+              
                 "Nivel de sal bajo"
             
             elsif (sal > 5.0 && sal <= 10.0)
-                "Nivel de sal normal"
+                
+                  "Nivel de sal normal"
             
             elsif (sal > 10.0 && sal <= 50.0)
-                "Nivel de sal alto"
+              
+                  "Nivel de sal alto"
             else
-                "Nivel de sal muy alto"
+            
+                  "Nivel de sal muy alto"
             end
         
     end

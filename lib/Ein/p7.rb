@@ -70,7 +70,13 @@ class Lista
     
     end
     
+     def clasificar_lista_sal
      
+        while(empty? != true) do
+             puts get_tail.value.clasificar_sal
+        end
+        true
+     end
    
         
     

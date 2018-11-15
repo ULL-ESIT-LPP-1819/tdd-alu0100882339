@@ -155,7 +155,7 @@ end
         lista.set_head(etiqueta_4)
         lista.set_head(etiqueta_5)
         
-        
+        lista.clasificar_lista_sal
         expect(true).to eq(lista.clasificar_lista_sal)
       end
       
