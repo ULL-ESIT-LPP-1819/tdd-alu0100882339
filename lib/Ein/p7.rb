@@ -1,4 +1,4 @@
-Node = Struct.new(:value)
+Node = Struct.new(:value, :next)
 
 #class LISTA 
 #    attr_accessor :head, :tail

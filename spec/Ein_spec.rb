@@ -68,7 +68,7 @@ RSpec.describe Ein do
     
   describe Node do
     
-    nodo = Node.new(0, nil, nil)
+    nodo = Node.new(0, nil)
     
     context "Lista doblemente enlazanda - nodo" do
       
