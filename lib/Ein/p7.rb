@@ -47,10 +47,20 @@ class Lista
     
         aux = @head
         @head = @head.next
+        @head.prev = nil
         aux.next = nil
         aux
         
     
+    end
+    
+    def get_tail
+    
+        aux = @tail
+        @tail = @tail.prev
+        @tail.next = nil
+        aux.prev = nil
+        aux
     end
         
         
