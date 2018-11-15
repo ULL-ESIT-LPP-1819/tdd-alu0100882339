@@ -62,7 +62,7 @@ RSpec.describe Ein do
         #end
          it "Prueba del método para clasificar la sal" do
             expect("Nivel de sal normal").to eq(etiqueta.clasificar_sal)
-       end
+          end
   
 
       end
