@@ -47,8 +47,8 @@ class Lista
     
         aux = @head
         @head = @head.next
-        @head.prev = nil
-        aux.next = nil
+        #@head.prev = nil
+        #aux.next = nil
         aux
         
     
@@ -58,12 +58,17 @@ class Lista
     
         aux = @tail
         @tail = @tail.prev
-        @tail.next = nil
-        aux.prev = nil
+       # @tail.next = nil
+    #    aux.prev = nil
         aux
     end
     
-
+    def empty?
+        
+        @head == nil
+        @tail == nil
+    
+    end
         
         
 end

@@ -135,7 +135,7 @@ end
       
       it "Debe existir un método para comprobar si la lista está vacía" do
         
-        lista.get_head
+        lista.get_tail
         expect(true).to eq(lista.empty?)
         
       end
