@@ -65,6 +65,20 @@ RSpec.describe Ein do
       end
   
     end
+    
+  describe LISTA do
+    
+    nodo = Nodo.new(0, nil, nil)
+    
+    context "Lista doblemente enlazanda" do
+      
+      it "Debe existir un valor" do
+      
+        expect(0).to eq(nodo.value)
+      end
+    end
+  end
+  
  
 end
 

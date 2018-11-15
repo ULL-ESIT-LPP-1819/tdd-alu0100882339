@@ -42,10 +42,12 @@ class EIN
        puts "Proteínas                  |\t\t#{@proteinas}     \t      | \t #{((@proteinas/@ingesta_recomendada[6])*100).round(2)}\t\t       |    #{(@t_porciones*@proteinas)/100}\t       |\t #{(@t_porciones*(@proteinas/@ingesta_recomendada[6])).round(2)} "
        puts "Sal                        |\t\t#{@sal}     \t      | \t #{((@sal/@ingesta_recomendada[7])*100).round(2)}\t\t       |    #{(@t_porciones*@sal)/100}\t\t       |\t #{(@t_porciones*(@sal/@ingesta_recomendada[7])).round(2)} "
    
-   end
+       end
    
        
    
    
 end
+
+
 
