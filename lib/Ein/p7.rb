@@ -1,15 +1,24 @@
 Node = Struct.new(:value, :next, :prev)
 
-class LISTA 
-    attr_accessor :head, :tail
+#class LISTA 
+#    attr_accessor :head, :tail
     
-    def initialize
+ #   def initialize
         
-        @head = nil
-        @tail = nil
+  #      @head = nil
+   #     @tail = nil
         
-    end
+    #end
     
-    
+    #def set_head(value)
+     #  nodo = Node.new(value, nil, nil)
+       
+      # nodo.next = @head
+      # @head.prev = nodo
+      # @head = nodo
+       
+       
         
-end
+    #end
+        
+#end
