@@ -27,6 +27,18 @@ class Lista
         
     end
     
-   
+    def set_tail(value)
+        nodo = Node.new(value, nil, nil)
+        
+        if(@tail == nil)
+            @head = nodo
+            @tail = nodo
+        else
+            nodo.prev = @tail
+            @tail.next = nodo
+            @tail = nodo
+        end
+    
+    end
         
 end
