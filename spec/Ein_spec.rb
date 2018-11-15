@@ -56,10 +56,10 @@ RSpec.describe Ein do
           expect(5).to eq(etiqueta.porciones)
         end
         
-        it "Debe exisistir un método que muestre la información de la etiqueta" do
+       # it "Debe exisistir un método que muestre la información de la etiqueta" do
         
-            etiqueta.info
-        end
+        #    etiqueta.info
+        #end
   
 
       end
@@ -97,10 +97,15 @@ end
     
     context "Lista doblemente enlazada -lista" do
     
-    it "Debe existir un head" do
+      it "Debe existir un head" do
     
-      expect(nil).to eq(lista.head)
-    end
+        expect(nil).to eq(lista.head)
+      end
+      
+      it "Debe existir un tail" do
+        expect(nil).to eq(lista.tail)
+        
+      end
     end
   end
     
