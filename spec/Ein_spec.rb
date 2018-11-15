@@ -106,6 +106,11 @@ end
         expect(nil).to eq(lista.tail)
         
       end
+      
+      it "Debe existir un método para insertar head" do
+      
+        expect(2).to eq(lista.head.value)
+      end
     end
   end
     
