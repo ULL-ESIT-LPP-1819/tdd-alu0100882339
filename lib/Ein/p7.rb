@@ -18,8 +18,9 @@ class Lista
            @tail = nodo
                
        else
-        nodo.next = @head
+        
         @head.prev = nodo
+        nodo.next = @head
         @head = nodo
        end
        
@@ -34,11 +35,23 @@ class Lista
             @head = nodo
             @tail = nodo
         else
-            nodo.prev = @tail
+            
             @tail.next = nodo
+            nodo.prev = @tail
             @tail = nodo
         end
     
     end
+    
+    def get_head
+    
+        aux = @head
+        @head = @head.next
+        aux.next = nil
+        aux
+        
+    
+    end
+        
         
 end
