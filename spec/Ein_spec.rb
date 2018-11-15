@@ -70,15 +70,21 @@ RSpec.describe Ein do
     
     nodo = Node.new(0, nil, nil)
     
-    context "Lista doblemente enlazanda" do
+    context "Lista doblemente enlazanda - nodo" do
       
       it "Debe existir un valor" do
       
         expect(0).to eq(nodo.value)
       end
-    end
+      
+      it "Debe existir un next" do
+        expect(nil).to eq(nodo.next)
+      end
+      
   end
   
  
+end
+
 end
 
