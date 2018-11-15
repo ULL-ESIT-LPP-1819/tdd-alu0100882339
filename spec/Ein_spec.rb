@@ -118,6 +118,11 @@ end
         lista.set_tail(3)
         expect(3).to eq(lista.tail.value)
       end
+      
+      it "Debe existir un método para extraer el head" do
+        
+        expect(2).to eq(lista.get_head.value)
+      end
     end
   end
     
