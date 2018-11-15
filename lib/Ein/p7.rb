@@ -10,15 +10,21 @@ class Lista
         
     end
     
-    #def set_head(value)
-     #  nodo = Node.new(value, nil, nil)
+    def set_head(value)
+       nodo = Node.new(value, nil, nil)
        
-      # nodo.next = @head
-      # @head.prev = nodo
-      # @head = nodo
+       if(@head== nil)
+           @head = nodo
+           @tail = nodo
+               
+       else
+        nodo.next = @head
+        @head.prev = nodo
+        @head = nodo
+       end
        
        
         
-    #end
+    end
         
 end

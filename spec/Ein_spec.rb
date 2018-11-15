@@ -109,6 +109,7 @@ end
       
       it "Debe existir un método para insertar head" do
       
+        lista.set_head(2)
         expect(2).to eq(lista.head.value)
       end
     end
