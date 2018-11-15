@@ -81,6 +81,10 @@ RSpec.describe Ein do
         expect(nil).to eq(nodo.next)
       end
       
+      it "Debe existir un prev" do
+        expect(nil).to eq(nodo.prev)
+      end
+      
   end
   
  
