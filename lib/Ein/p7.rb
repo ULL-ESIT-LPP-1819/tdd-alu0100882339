@@ -62,6 +62,8 @@ class Lista
         aux.prev = nil
         aux
     end
+    
+
         
         
 end
