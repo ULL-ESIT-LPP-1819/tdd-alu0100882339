@@ -1,6 +1,6 @@
 Node = Struct.new(:value, :next, :prev)
 
-#class LISTA 
+class Lista 
 #    attr_accessor :head, :tail
     
  #   def initialize
@@ -21,4 +21,4 @@ Node = Struct.new(:value, :next, :prev)
         
     #end
         
-#end
+end

@@ -90,5 +90,20 @@ RSpec.describe Ein do
  
 end
 
+
+  describe Lista do
+    
+    lista = Lista.new()
+    
+    context "Lista doblemente enlazada -lista" do
+    
+    it "Debe existir un head" do
+    
+      expect(nil).to eq(lista.head)
+    end
+    end
+  end
+    
+
 end
 
