@@ -112,6 +112,12 @@ end
         lista.set_head(2)
         expect(2).to eq(lista.head.value)
       end
+      
+      it "Debe existir un método para insertar tail" do
+      
+        lista.set_tail(3)
+        expect(2).to eq(lista.tail.value)
+      end
     end
   end
     
