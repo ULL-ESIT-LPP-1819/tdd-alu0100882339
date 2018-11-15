@@ -60,6 +60,9 @@ RSpec.describe Ein do
         
         #    etiqueta.info
         #end
+         it "Prueba del método para clasificar la sal" do
+            expect("Nivel de sal normal").to eq(etiqueta.clasificar_sal)
+       end
   
 
       end
@@ -129,6 +132,8 @@ end
         lista.set_head(2)
         expect(3).to eq(lista.get_tail.value)
       end
+      
+      
     end
   end
     

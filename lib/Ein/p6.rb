@@ -43,6 +43,9 @@ class EIN
        puts "Sal                        |\t\t#{@sal}     \t      | \t #{((@sal/@ingesta_recomendada[7])*100).round(2)}\t\t       |    #{(@t_porciones*@sal)/100}\t\t       |\t #{(@t_porciones*(@sal/@ingesta_recomendada[7])).round(2)} "
    
        end
+       
+    
+    
    
        
    
