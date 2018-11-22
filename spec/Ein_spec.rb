@@ -207,6 +207,11 @@ end
           expect(95).to eq(paciente.peso)
         
         end
+        
+        it "Debe tener una talla" do
+        
+          expect(150).to eq(paciente.talla)
+        end
       
       end
     
