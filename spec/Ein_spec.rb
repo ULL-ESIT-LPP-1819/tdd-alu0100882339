@@ -212,6 +212,11 @@ end
         
           expect(150).to eq(paciente.talla)
         end
+        
+        it "Debe tener un sexo" do
+        
+          expect("Mujer").to eq(paciente.sexo)
+        end
       
       end
     
