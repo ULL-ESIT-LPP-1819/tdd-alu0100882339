@@ -233,6 +233,14 @@ end
         
           expect(paciente.class == Paciente).to eq(true)
         end
+        
+        it "Paciente es una clase hija de Individuo" do
+        
+          expect(paciente.is_a?Individuo).to eq(true)
+        end
+        
+        
+        
       
       end
     
