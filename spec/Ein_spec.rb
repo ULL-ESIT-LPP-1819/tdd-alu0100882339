@@ -250,8 +250,68 @@ end
           expect(paciente.is_a?Individuo).to eq(true)
         end
         
+      end
+      
+      context "Prueba de la clasificación de pacientes" do
+      
+      lista_p = Lista.new()
+      lista_ps = Lista.new()
+      lista_pc = Lista.new()
+      
+      paciente_1 = Paciente.new("Ana", 35, 95, 1.50, "Mujer") #obesidad 3
+      paciente_2 = Paciente.new("Pedro", 57, 70, 1.70, "Hombre" ) #adecuado
+      paciente_3 = Paciente.new("Maria", 28, 65, 1.57, "Mujer") #sobrepeso
+      paciente_4 = Paciente.new("Gabriela", 21, 45, 1.63, "Mujer") #delgado
+      paciente_5 = Paciente.new("Tomás", 45, 130, 1.87, "Hombre") #obesidad 2
+      paciente_6 = Paciente.new("Julia", 51, 85, 1.65, "Mujer") #obesidad 1
+      
+      lista_p.set_head(paciente_1)
+      lista_p.set_head(paciente_2)
+      lista_p.set_head(paciente_3)
+      lista_p.set_head(paciente_4)
+      lista_p.set_head(paciente_5)
+      lista_p.set_head(paciente_6)
+      
+      
+      while(lista_p.empty? != true) do
         
+        aux = lista_p.get_tail.value
+        aux2 = aux.calcular_imc
         
+        if(aux2 < 30)
+          lista_ps.set_head(aux)
+        else
+          lista_pc.set_head(aux)
+        end
+        
+      end
+      
+      
+      it "Prueba de la clasificación de los pacientes" do
+      aux = lista_ps.head
+      expect("Bajo peso -- Delgado").to eq(aux.value.clasificar_imc)
+      aux = aux.next
+      expect("Sobrepeso -- Sobrepeso").to eq(aux.value.clasificar_imc)
+      aux = aux.next
+      expect("Adecuado -- Aceptable").to eq(aux.value.clasificar_imc)
+      
+      aux2 = lista_pc.head
+      
+      expect("Obesidad grado 1 -- Obesidad").to eq(aux2.value.clasificar_imc)
+      aux2 = aux2.next
+      expect("Obesidad grado 2 -- Obesidad").to eq(aux2.value.clasificar_imc)
+      aux2 = aux2.next
+      expect("Obesidad grado 3 -- Obesidad").to eq(aux2.value.clasificar_imc)
+      
+      
+        
+       end 
+      
+      
+      
+      
+      
+      
       
       end
     
