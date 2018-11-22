@@ -181,6 +181,11 @@ end
         
           expect(35).to eq(individuo.edad)
         end
+        
+        it "individuo es una instancia de la clase Individuo" do
+          
+          expect(individuo.instance_of?Individuo).to eq(true)
+        end
       end
     
     end
