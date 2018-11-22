@@ -201,7 +201,12 @@ end
           expect(paciente.instance_of?Paciente).to eq(true)
         
         end
-      
+        
+        it "Debe tener un peso" do
+        
+          expect(95).to eq(paciente.peso)
+        
+        end
       
       end
     

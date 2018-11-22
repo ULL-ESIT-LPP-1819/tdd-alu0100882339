@@ -1,7 +1,7 @@
 
 
-class Paciente
+class Paciente < Individuo
 
-
+    
 
 end
