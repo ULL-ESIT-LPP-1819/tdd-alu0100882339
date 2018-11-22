@@ -223,6 +223,11 @@ end
           expect(42.22).to eq(paciente.calcular_imc)
         
         end
+        
+        it "Debe tener un método para clasificar el imc" do
+        
+          expect("Obesidad grado 3 -- Obesidad").to eq(paciente.clasificar_imc)
+        end
       
       end
     
