@@ -176,6 +176,11 @@ end
         
           expect("Ana").to eq(individuo.nombre)
         end
+        
+        it "Debe exisistir una edad" do
+        
+          expect("35").to eq(individuo.edad)
+        end
       end
     
     end
