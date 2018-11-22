@@ -191,6 +191,12 @@ end
         
           expect(individuo.class == Individuo).to eq(true)
         end
+        
+        it "individuo es una clase hija de Object" do
+        
+          expect(individuo.is_a?Object).to eq(true)
+        
+        end
       end
     
     end
