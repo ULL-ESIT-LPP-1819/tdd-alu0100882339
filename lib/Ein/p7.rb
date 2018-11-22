@@ -74,6 +74,7 @@ class Lista
      
         while(empty? != true) do
              puts get_tail.value.clasificar_sal
+             
         end
         true
      end

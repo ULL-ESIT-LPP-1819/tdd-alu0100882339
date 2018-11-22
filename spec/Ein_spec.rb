@@ -168,3 +168,18 @@ end
 
 end
 
+
+describe Individuo do
+  
+  individuo = Individuo.new()
+  
+  context "Pruebas de la clase Individuo" do
+  
+    it "Debe exitir un nombre" do
+      
+      expect("Ana").to eq(individuo.nombre)
+    end
+  
+  end
+end
+
