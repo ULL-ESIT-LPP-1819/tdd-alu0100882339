@@ -305,7 +305,26 @@ end
       
       
         
-       end 
+       end
+       
+       it "Prueba del to_s" do
+       
+        puts "\n\n"
+        puts "Listado de pacientes sin tratamiento \n"
+        while(lista_ps.empty? != true)
+
+          aux = lista_ps.get_tail.value
+          aux.to_s
+        end
+        
+        puts "\n\n"
+        puts "Listado de pacientes con tratamiento \n"
+        while(lista_pc.empty?!=true)
+         
+          aux2 = lista_pc.get_tail.value
+          aux2.to_s
+        end
+       end
       
       
       

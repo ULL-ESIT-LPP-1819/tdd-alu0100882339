@@ -35,5 +35,17 @@ class Paciente < Individuo
         end
     end
     
+    def to_s
+        puts "------------------------------------------------------------------------------- \n"
+        puts "\t Nombre: #{@nombre}"
+        puts "\t Edad: #{@edad}"
+        puts "\t Sexo: #{@sexo}"
+        puts "\t Peso: #{@peso}"
+        puts "\t Talla: #{@talla}"
+        puts "\t Resultado de su imc: #{clasificar_imc}"
+        puts "------------------------------------------------------------------------------- \n"
+    
+    end
+    
 
 end
