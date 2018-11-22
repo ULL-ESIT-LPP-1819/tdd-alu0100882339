@@ -228,6 +228,11 @@ end
         
           expect("Obesidad grado 3 -- Obesidad").to eq(paciente.clasificar_imc)
         end
+        
+        it "paciente es de la clase Paciente" do
+        
+          expect(paciente.class == Paciente).to eq(true)
+        end
       
       end
     
