@@ -189,6 +189,23 @@ end
       end
     
     end
+    
+    describe Paciente do
+    
+      paciente = Paciente.new()
+      
+      context "Pruebas de la clase Paciente" do
+      
+        it "paciente es una instancia de la clase Paciente" do
+        
+          expect(paciente.instance_of?Paciente).to eq(true)
+        
+        end
+      
+      
+      end
+    
+    end
 
 end
 
