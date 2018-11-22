@@ -186,6 +186,11 @@ end
           
           expect(individuo.instance_of?Individuo).to eq(true)
         end
+        
+        it "individuo es de la clase Individuo" do
+        
+          expect(individuo.class == Individuo).to eq(true)
+        end
       end
     
     end
