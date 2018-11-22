@@ -1,9 +1,10 @@
 
 class Individuo
-    attr_reader :nombre
+    attr_reader :nombre, :edad
     
-    def initialize(nombre)
+    def initialize(nombre, edad)
        
-       @nombre = nombre 
+       @nombre = nombre
+       @edad = edad
     end
 end

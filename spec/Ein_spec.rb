@@ -167,7 +167,7 @@ end
     
     describe Individuo do
     
-      individuo = Individuo.new("Ana")
+      individuo = Individuo.new("Ana", 35)
       
       context "Pruebas de la clase Individuo" do
       
@@ -179,7 +179,7 @@ end
         
         it "Debe exisistir una edad" do
         
-          expect("35").to eq(individuo.edad)
+          expect(35).to eq(individuo.edad)
         end
       end
     
