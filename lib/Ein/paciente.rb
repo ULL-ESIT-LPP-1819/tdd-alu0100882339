@@ -10,5 +10,12 @@ class Paciente < Individuo
         @sexo = sexo
     end
     
+    
+    def calcular_imc
+        
+       ( @peso/(@talla*@talla)).round(2)
+        
+    end
+    
 
 end
