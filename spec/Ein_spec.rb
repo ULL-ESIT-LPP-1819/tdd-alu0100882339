@@ -192,7 +192,7 @@ end
     
     describe Paciente do
     
-      paciente = Paciente.new("Ana", 35, 95, 150)
+      paciente = Paciente.new("Ana", 35, 95, 150, "Mujer")
       
       context "Pruebas de la clase Paciente" do
       
