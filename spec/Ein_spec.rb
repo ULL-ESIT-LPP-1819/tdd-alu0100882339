@@ -192,7 +192,7 @@ end
     
     describe Paciente do
     
-      paciente = Paciente.new("Ana", 35, 95, 150, "Mujer")
+      paciente = Paciente.new("Ana", 35, 95, 1.50, "Mujer")
       
       context "Pruebas de la clase Paciente" do
       
@@ -210,12 +210,18 @@ end
         
         it "Debe tener una talla" do
         
-          expect(150).to eq(paciente.talla)
+          expect(1.50).to eq(paciente.talla)
         end
         
         it "Debe tener un sexo" do
         
           expect("Mujer").to eq(paciente.sexo)
+        end
+        
+        it "Debe tener un método para calcular el imc" do
+        
+          expect(42.22).to eq(paciente.calcular_imc)
+        
         end
       
       end
