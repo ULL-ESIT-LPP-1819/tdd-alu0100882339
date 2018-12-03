@@ -8,5 +8,10 @@ class Individuo
        @edad = edad
     end
     
+    def <=> (other)
     
+        return nil unless other.instance_of?Individuo
+        edad <=> other.edad
+    
+    end
 end
