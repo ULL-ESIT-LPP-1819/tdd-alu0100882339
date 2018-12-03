@@ -74,6 +74,11 @@ RSpec.describe Ein do
         
           expect(etiqueta < etiqueta_1).to eq(true)
         end
+        
+        it "Prueba del >" do
+        
+          expect(etiqueta_1 > etiqueta).to eq(true)
+        end
   
   end
     
