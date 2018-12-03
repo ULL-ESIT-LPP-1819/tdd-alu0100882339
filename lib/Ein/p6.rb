@@ -65,6 +65,14 @@ class EIN
         
     end
     
+    def <=> (other)
+    
+    
+        return nil unless other.instance_of?EIN
+        valor_e_kj <=> other.valor_e_kj
+    
+    end
+    
    
        
     

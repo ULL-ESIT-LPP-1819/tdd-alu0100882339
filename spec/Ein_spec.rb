@@ -70,14 +70,14 @@ RSpec.describe Ein do
       context "Pruebas de instancias comparables"
       
         
-        it "Prueba del <" do
-        
-          expect(etiqueta < etiqueta_1).to eq(true)
-        end
-        
         it "Prueba del >" do
         
-          expect(etiqueta_1 > etiqueta).to eq(true)
+          expect(etiqueta > etiqueta_1).to eq(true)
+        end
+        
+        it "Prueba del <" do
+        
+          expect(etiqueta_1 < etiqueta).to eq(true)
         end
   
   end
