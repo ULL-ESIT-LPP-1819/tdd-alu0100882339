@@ -201,17 +201,27 @@ end
       before :each do
         lista = Lista.new()
         etiqueta_1 = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0,20, 5)
-        etiqueta_2 = EIN.new("Papas",70.0,20.0,260.0,90.0,50.0,20.0,20, 5)
+        etiqueta_2 = EIN.new("Papas",80.0,20.0,260.0,90.0,50.0,0.0,20, 5)
         lista.set_head(etiqueta_1)
         lista.set_head(etiqueta_2)
       end  
       
       it "Prueba de collect" do
         
-        expect(lista.collect{|i| i.to_s}).to eq (["Papas", "Galleta"])
+         expect(lista.collect{|i| i.to_s}).to eq (["Papas", "Galleta"])
       end
       
+     # it "Prueba de select" do
       
+      #  expect(lista.select{|i| i.to_s == "Galleta"}).to eq("Galleta")
+      
+      #end
+      
+      
+      it "Prueba del max" do
+      
+        puts lista.max{|i| i.sal}
+      end
     
     
     end
