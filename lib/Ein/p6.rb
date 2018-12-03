@@ -74,7 +74,11 @@ class EIN
     end
     
    
+    def to_s
        
+       "#{@nombre}"
+        
+    end
     
     
    
