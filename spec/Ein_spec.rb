@@ -69,7 +69,7 @@ RSpec.describe Ein do
 
       end
       
-      context "Pruebas de instancias comparables"
+      context "Pruebas de instancias comparables EIN" do
       
         
         it "Prueba del >" do
@@ -98,6 +98,7 @@ RSpec.describe Ein do
           expect(etiqueta_1 <= etiqueta_2).to eq(true)
         
         end
+      end
   
   end
     
@@ -200,6 +201,8 @@ end
     describe Individuo do
     
       individuo = Individuo.new("Ana", 35)
+      individuo_2 = Individuo.new("Pedro", 40)
+      individuo_3 = Individuo.new("Luis", 35)
       
       context "Pruebas de la clase Individuo" do
       
@@ -230,8 +233,39 @@ end
         
         end
       end
+      
+      context "Pruebas de comparables individio" do
+  
+        it "Prueba del >" do
+        
+          expect(individuo_2 > individuo).to eq(true)  
+        end
+        
+        it "Prueba del <" do
+        
+          expect(individuo < individuo_2).to eq(true)
+        end
+        
+        it "Prueba del ==" do
+        
+          expect(individuo == individuo_3).to eq(true)
+        end
+        
+        it "Prueba del <=" do
+        
+          expect(individuo <= individuo_3).to eq(true)
+        end
+        
+        it "Prueba del >=" do
+        
+          expect(individuo_2 >= individuo).to eq(true)
+          
+        end
+  
+      end
     
     end
+
     
     describe Paciente do
     
