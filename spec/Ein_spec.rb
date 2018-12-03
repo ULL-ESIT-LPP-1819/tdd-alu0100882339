@@ -5,7 +5,7 @@ RSpec.describe Ein do
   
   describe EIN do
     etiqueta = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0,20, 5)
- 
+    etiqueta_1 = EIN.new("Papas", 50.0, 10.0, 200.0, 80.0, 30.0, 4.0, 10, 3) 
       context "Etiqueta_informacion_n" do
   
         it "Debe existir un nombre para la etiqueta" do
@@ -66,8 +66,16 @@ RSpec.describe Ein do
   
 
       end
+      
+      context "Pruebas de instancias comparables"
+      
+        
+        it "Prueba del <" do
+        
+          expect(etiqueta < etiqueta_1).to eq(true)
+        end
   
-    end
+  end
     
   describe Node do
     
@@ -335,6 +343,10 @@ end
       end
     
     end
+    
 
 end
+
+
+
 
