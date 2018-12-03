@@ -192,10 +192,24 @@ end
         expect(true).to eq(lista.clasificar_lista_sal)
       end
       
+      
+
+      end
+      
+    context "Pruebas de enumerable - lista" do
     
       
       
+            
+      it "Prueba de collect" do
+        
+        lista.collect{|i| i}
+      end
+    
+    
     end
+    
+   
   end
     
     describe Individuo do
