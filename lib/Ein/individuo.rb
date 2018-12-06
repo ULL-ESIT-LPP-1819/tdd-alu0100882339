@@ -17,7 +17,7 @@ class Individuo
     
     def to_s
     
-        "#{@nombre} - #{@edad}"
+        "#{@nombre}"
     
     end
 end

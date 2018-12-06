@@ -267,11 +267,37 @@ end
         
       end
       
-      #it "Prueba de collect" do
+      it "Prueba de collect" do
       
-       
+         expect(@lista_i.collect{|i| i.to_s}).to eq(["Luis","Pedro","Ana"])
       
-      #end
+      end
+      
+      
+      it "Prueba del select" do
+      
+        expect(@lista_i.select{|i| i.nombre.size > 3}).to eq([@individuo_3,@individuo_2])
+        
+      end
+      
+      it "Prueba del max" do
+      
+        expect(@lista_i.max).to eq(@individuo_2)
+      
+      end
+      
+      
+      it "Prueba del min" do
+      
+        expect(@lista_i.min).to eq(@individuo_3)
+      end
+      
+      
+      it "Prueba del sort" do
+      
+        expect(@lista_i.sort).to eq([@individuo_3,@individuo,@individuo_2])
+      
+      end
     
     
     
