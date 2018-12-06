@@ -2,6 +2,7 @@ Node = Struct.new(:value, :next, :prev)
 
 class Lista 
    attr_accessor :head, :tail
+   include Enumerable
     
     def initialize
         
@@ -76,6 +77,20 @@ class Lista
              puts get_tail.value.clasificar_sal
         end
         true
+     end
+     
+     
+     def each
+         
+        it = @head
+        
+        while it != nil
+        
+            yield it.value
+            it = it.next
+        end
+     
+     
      end
      
      

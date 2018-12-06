@@ -5,7 +5,9 @@ RSpec.describe Ein do
   
   describe EIN do
     etiqueta = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0,20, 5)
- 
+    etiqueta_1 = EIN.new("Papas", 50.0, 10.0, 200.0, 80.0, 30.0, 4.0, 10, 3)
+    etiqueta_2 =  EIN.new("Chocolte",70.0,20.0,260.0,90.0,50.0,6.0,20, 5)
+    
       context "Etiqueta_informacion_n" do
   
         it "Debe existir un nombre para la etiqueta" do
@@ -66,8 +68,39 @@ RSpec.describe Ein do
   
 
       end
+      
+      context "Pruebas de instancias comparables EIN" do
+      
+        
+        it "Prueba del >" do
+        
+          expect(etiqueta > etiqueta_1).to eq(true)
+        end
+        
+        it "Prueba del <" do
+        
+          expect(etiqueta_1 < etiqueta).to eq(true)
+        end
+        
+        it "Prueba del  ==" do
+        
+          expect(etiqueta == etiqueta_2).to eq(true)
+        end
+        
+        it "Prueba del >=" do
+        
+          expect(etiqueta_2 >= etiqueta_1 ).to eq(true)
+        
+        end
+        
+        it "Prueba del <=" do
+        
+          expect(etiqueta_1 <= etiqueta_2).to eq(true)
+        
+        end
+      end
   
-    end
+  end
     
   describe Node do
     
@@ -159,15 +192,130 @@ end
         expect(true).to eq(lista.clasificar_lista_sal)
       end
       
+      
+
+      end
+      
+     
+   
+  end
+  
+  describe Lista do
+  
+    
+  context "Pruebas de enumerable - lista" do
     
       
+      before :each do
+        @lista_2 = Lista.new()
+        @etiqueta_1 = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0,20, 5)
+        @etiqueta_2 = EIN.new("Papas",80.0,20.0,260.0,90.0,50.0,0.0,20, 5)
+        #etiqueta_3 = EIN.new("Chocolate",80.0,20.0,260.0,90.0,50.0,0.0,20, 5)
+        @lista_2.set_head(@etiqueta_1)
+        @lista_2.set_head(@etiqueta_2)
+      end
+       
       
+      it "Prueba de collect" do
+        
+        
+         expect(@lista_2.collect{|i| i.to_s}).to eq(["Papas", "Galleta"])
+      end
+      
+      it "Prueba del select" do
+      
+        
+         expect(@lista_2.select{|i| i.nombre.size < 6}).to eq([@etiqueta_2])
+         #puts @lista_2.select{|i| i.nombre.size < 6}
+         #puts @etiqueta_2.nombre.size 
+        
+      
+      end
+      
+      it "Prueba del max" do
+      
+        expect(@lista_2.max).to eq(@etiqueta_2)
+        #puts lista_2.max
+      
+      end
+      
+      it "Prueba del min" do
+      
+        expect(@lista_2.min).to eq(@etiqueta_1)
+      end
+      
+      it "Prueba del sort" do
+      
+        expect(@lista_2.sort).to eq([@etiqueta_1,@etiqueta_2])
+      
+      end
+    
+    
+    end 
+    
+    context "Listas de individuos" do
+    
+      before :each do
+      
+        @lista_i = Lista.new()
+        @individuo = Individuo.new("Ana", 35)
+        @individuo_2 = Individuo.new("Pedro", 40)
+        @individuo_3 = Individuo.new("Luis", 35)
+        @lista_i.set_head(@individuo)
+        @lista_i.set_head(@individuo_2)
+        @lista_i.set_head(@individuo_3)
+        
+      end
+      
+      it "Prueba de collect" do
+      
+         expect(@lista_i.collect{|i| i.to_s}).to eq(["Luis","Pedro","Ana"])
+      
+      end
+      
+      
+      it "Prueba del select" do
+      
+        expect(@lista_i.select{|i| i.nombre.size > 3}).to eq([@individuo_3,@individuo_2])
+        
+      end
+      
+      it "Prueba del max" do
+      
+        expect(@lista_i.max).to eq(@individuo_2)
+      
+      end
+      
+      
+      it "Prueba del min" do
+      
+        expect(@lista_i.min).to eq(@individuo_3)
+      end
+      
+      
+      it "Prueba del sort" do
+      
+        expect(@lista_i.sort).to eq([@individuo_3,@individuo,@individuo_2])
+      
+      end
+    
+    
+    
+    
     end
+  
+  
+  
   end
+  
+  
+  
     
     describe Individuo do
     
       individuo = Individuo.new("Ana", 35)
+      individuo_2 = Individuo.new("Pedro", 40)
+      individuo_3 = Individuo.new("Luis", 35)
       
       context "Pruebas de la clase Individuo" do
       
@@ -198,8 +346,40 @@ end
         
         end
       end
+      
+      context "Pruebas de comparables individio" do
+  
+        it "Prueba del >" do
+        
+          expect(individuo_2 > individuo).to eq(true) 
+          
+        end
+        
+        it "Prueba del <" do
+          
+          expect(individuo < individuo_2).to eq(true)
+        end
+        
+        it "Prueba del ==" do
+        
+          expect(individuo == individuo_3).to eq(true)
+        end
+        
+        it "Prueba del <=" do
+        
+          expect(individuo <= individuo_3).to eq(true)
+        end
+        
+        it "Prueba del >=" do
+        
+          expect(individuo_2 >= individuo).to eq(true)
+          
+        end
+  
+      end
     
     end
+
     
     describe Paciente do
     
@@ -335,6 +515,10 @@ end
       end
     
     end
+    
 
 end
+
+
+
 

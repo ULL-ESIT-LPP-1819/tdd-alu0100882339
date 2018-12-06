@@ -1,5 +1,6 @@
 class EIN
    attr_reader :nombre, :grasa_t, :grasa_s, :hidratos_c, :azucares, :proteinas, :sal, :t_porciones, :porciones
+   include Comparable
    def initialize(nombre, grasa_t, grasa_s, hidratos_c, azucares, proteinas, sal, t_porciones, porciones)
        
        @nombre = nombre
@@ -63,7 +64,21 @@ class EIN
             end
         
     end
+    
+    def <=> (other)
+    
+    
+        return nil unless other.instance_of?EIN
+        valor_e_kj <=> other.valor_e_kj
+    
+    end
+    
+   
+    def to_s
        
+       "#{@nombre}"
+        
+    end
     
     
    
