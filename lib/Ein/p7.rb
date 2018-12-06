@@ -84,7 +84,7 @@ class Lista
          
         it = @head
         
-        while(it != nil)
+        while it != nil
         
             yield it.value
             it = it.next

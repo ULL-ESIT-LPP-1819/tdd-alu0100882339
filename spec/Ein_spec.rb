@@ -196,27 +196,54 @@ end
 
       end
       
-    context "Pruebas de enumerable - lista" do
+     
+   
+  end
+  
+  describe Lista do
+  
     
-      #before :each do
-       # lista = Lista.new()
-        #etiqueta_1 = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0,20, 5)
-        #etiqueta_2 = EIN.new("Papas",80.0,20.0,260.0,90.0,50.0,0.0,20, 5)
-        #lista.set_head(etiqueta_1)
-        #lista.set_head(etiqueta_2)
-      end  
+  context "Pruebas de enumerable - lista" do
+    
+      
+      before :each do
+        @lista_2 = Lista.new()
+        @etiqueta_1 = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0,20, 5)
+        @etiqueta_2 = EIN.new("Papas",80.0,20.0,260.0,90.0,50.0,0.0,20, 5)
+        #etiqueta_3 = EIN.new("Chocolate",80.0,20.0,260.0,90.0,50.0,0.0,20, 5)
+        @lista_2.set_head(@etiqueta_1)
+        @lista_2.set_head(@etiqueta_2)
+      end
+       
       
       it "Prueba de collect" do
         
         
-         expect(lista.collect{|i| i.to_s}).to eq (["Chocolate", "Atún", "Manzana","Papas", "Galleta"])
+         expect(@lista_2.collect{|i| i.to_s}).to eq(["Papas", "Galleta"])
       end
       
+      it "Prueba del select" do
+      
+        
+         expect(lista_2.select{|i| i.nombre.size < 6}).to eq([etiqueta_2.nombre])
+         #puts @lista_2.select{|i| i.nombre.size < 6}
+         #puts @etiqueta_2.nombre.size 
+         vdv
+      
+      end
+      
+     # it "Prueba del max" do
+      
+      #  expect(lista_2.max).to eq(etiqueta_2.nombre)
+        #puts lista_2.max
+      
+      #end
     
     
-    end
-    
-   
+    end 
+  
+  
+  
   end
     
     describe Individuo do
@@ -259,11 +286,12 @@ end
   
         it "Prueba del >" do
         
-          expect(individuo_2 > individuo).to eq(true)  
+          expect(individuo_2 > individuo).to eq(true) 
+          
         end
         
         it "Prueba del <" do
-        
+          
           expect(individuo < individuo_2).to eq(true)
         end
         
