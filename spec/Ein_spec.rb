@@ -225,26 +225,65 @@ end
       it "Prueba del select" do
       
         
-         expect(lista_2.select{|i| i.nombre.size < 6}).to eq([etiqueta_2.nombre])
+         expect(@lista_2.select{|i| i.nombre.size < 6}).to eq([@etiqueta_2])
          #puts @lista_2.select{|i| i.nombre.size < 6}
          #puts @etiqueta_2.nombre.size 
-         vdv
+        
       
       end
       
-     # it "Prueba del max" do
+      it "Prueba del max" do
       
-      #  expect(lista_2.max).to eq(etiqueta_2.nombre)
+        expect(@lista_2.max).to eq(@etiqueta_2)
         #puts lista_2.max
+      
+      end
+      
+      it "Prueba del min" do
+      
+        expect(@lista_2.min).to eq(@etiqueta_1)
+      end
+      
+      it "Prueba del sort" do
+      
+        expect(@lista_2.sort).to eq([@etiqueta_1,@etiqueta_2])
+      
+      end
+    
+    
+    end 
+    
+    context "Listas de individuos" do
+    
+      before :each do
+      
+        @lista_i = Lista.new()
+        @individuo = Individuo.new("Ana", 35)
+        @individuo_2 = Individuo.new("Pedro", 40)
+        @individuo_3 = Individuo.new("Luis", 35)
+        @lista_i.set_head(@individuo)
+        @lista_i.set_head(@individuo_2)
+        @lista_i.set_head(@individuo_3)
+        
+      end
+      
+      #it "Prueba de collect" do
+      
+       
       
       #end
     
     
-    end 
+    
+    
+    end
   
   
   
   end
+  
+  
+  
     
     describe Individuo do
     

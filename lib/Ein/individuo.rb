@@ -14,4 +14,10 @@ class Individuo
         edad <=> other.edad
     
     end
+    
+    def to_s
+    
+        "#{@nombre} - #{@edad}"
+    
+    end
 end
