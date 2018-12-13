@@ -422,6 +422,11 @@ end
          
           expect(paciente.peso_teorico_ideal).to eq(50)
          end
+         
+         it "Debe tener un gasto energético basal" do
+         
+          expect(paciente.gasto_e_basal).to eq(1551.5)
+         end
         
         
       end
