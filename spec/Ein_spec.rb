@@ -435,7 +435,7 @@ end
         
           it "Gasto de actividad física" do
           
-           expect(paciente.gasto_a_fisica).to eq(1551.5)
+           expect(paciente.gasto_a_fisica("Reposo")).to eq(0.0)
           end
         
       end

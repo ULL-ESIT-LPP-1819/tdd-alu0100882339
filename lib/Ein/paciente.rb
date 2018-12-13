@@ -44,6 +44,20 @@ class Paciente < Individuo
     
     end
     
+    def gasto_a_fisica(actividad)
+    
+        if(actividad == "Reposo")
+            (@gasto_e_basal * 0.0).round(2)
+        elsif(actividad == "Actividad ligera")
+            (@gasto_e_basal * 0.12).round(2)
+        elsif (actividad == "Actividad moderada")
+            (@gasto_e_basal * 0.27).round(2)
+        elsif (actividad == "Actividad intensa")
+            (@gasto_e_basal * 0.54).round(2)
+        end
+    
+    end
+    
     def clasificar_imc
         imc = calcular_imc
         
