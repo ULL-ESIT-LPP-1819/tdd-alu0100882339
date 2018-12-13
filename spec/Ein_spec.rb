@@ -482,6 +482,30 @@ end
             expect( @menu2.collect{|i| i.valor_e_kc}.reduce(:+)).to be > @gasto_total
         
         end
+        
+        it "Prueba menú 3" do
+        
+            
+             expect( @menu3.collect{|i| i.valor_e_kc}.reduce(:+)). to be < @gasto_total
+        end
+        
+        
+        it "Prueba menú 4" do
+        
+          
+          
+          expect( @menu4.collect{|i| i.valor_e_kc}.reduce(:+)).to be < @gasto_total
+        
+        end
+        
+        
+        it "Prueba menú 5" do
+        
+          
+          
+          expect( @menu5.collect{|i| i.valor_e_kc}.reduce(:+)).to be > @gasto_total
+        
+        end
       
       end
       
