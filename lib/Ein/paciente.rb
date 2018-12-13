@@ -1,7 +1,7 @@
 
 
 class Paciente < Individuo
-    attr_reader :peso, :talla, :sexo, :peso_teorico_ideal, :gasto_e_basal
+    attr_reader :peso, :talla, :sexo, :peso_teorico_ideal, :gasto_e_basal, :efecto_t
     
     def initialize(nombre, edad, peso, talla, sexo)
         super(nombre, edad)
@@ -10,7 +10,7 @@ class Paciente < Individuo
         @sexo = sexo
         @peso_teorico_ideal = calcular_peso_ideal
         @gasto_e_basal = calcular_gasto_e_basal
-        
+        @efecto_t = calcular_efecto_t
     end
     
     
@@ -34,6 +34,12 @@ class Paciente < Individuo
         else
             ((10*@peso)+(6.25*talla_i) - (5*@edad) - 5).round(2)
         end
+    
+    end
+    
+    def calcular_efecto_t
+    
+        (@gasto_e_basal * 0.10).round(2)
     
     end
     
