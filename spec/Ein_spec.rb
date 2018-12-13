@@ -442,8 +442,42 @@ end
           
             expect(paciente.gasto_e_total("Reposo")).to eq(1706.65)
           end
+
         
       end
+      
+      context "Pruebas de los menús" do
+      
+        before :all do
+        
+            @etiqueta_1 = EIN.new("Galleta",5.0,2.0,26.0,9.0,5.0,1.0,2, 5)
+            @etiqueta_2 = EIN.new("Papas",7.0,3.0,16.0,8.0,10.0,2.0,1, 5)
+            @etiqueta_3 = EIN.new("Manzana",4.0,1.0,30.0,6.0,24.0,3.0,10, 5)
+            @etiqueta_4 = EIN.new("Atún",33.0,9.0,150.0,56.0,12.0,7.0,12, 5)
+            @etiqueta_5 = EIN.new("Chocolate",55.0,13.0,200.0,80.0,50.0,4.0,20, 5)
+            
+            @menu1 = [@etiqueta_1, @etiqueta_2]
+            @menu2 = [@etiqueta_3, @etiqueta_4]
+            @menu3 = [@etiqueta_5, @etiqueta_1]
+            @menu4 = [@etiqueta_2, @etiqueta_3]
+            @menu5 = [@etiqueta_4, @etiqueta_5]
+            
+            @gasto_total = paciente.gasto_e_total("Reposo")
+            
+        end
+      
+      
+        it "Prueba menú 1" do
+        
+          
+           expect( @menu1.collect{|i| i.valor_e_kc}.reduce(:+)).to be < @gasto_total
+        
+        
+        end
+      
+      end
+      
+      
       
       context "Prueba de la clasificación de pacientes" do
       
