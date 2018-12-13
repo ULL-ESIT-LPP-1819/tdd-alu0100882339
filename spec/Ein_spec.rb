@@ -457,7 +457,7 @@ end
             @etiqueta_5 = EIN.new("Chocolate",55.0,13.0,200.0,80.0,50.0,4.0,20, 5)
             
             @menu1 = [@etiqueta_1, @etiqueta_2]
-            @menu2 = [@etiqueta_3, @etiqueta_4]
+            @menu2 = [@etiqueta_3, @etiqueta_4, @etiqueta_5]
             @menu3 = [@etiqueta_5, @etiqueta_1]
             @menu4 = [@etiqueta_2, @etiqueta_3]
             @menu5 = [@etiqueta_4, @etiqueta_5]
@@ -472,6 +472,14 @@ end
           
            expect( @menu1.collect{|i| i.valor_e_kc}.reduce(:+)).to be < @gasto_total
         
+        
+        end
+        
+        it "Prueba menú 2" do
+        
+            
+            
+            expect( @menu2.collect{|i| i.valor_e_kc}.reduce(:+)).to be > @gasto_total
         
         end
       
