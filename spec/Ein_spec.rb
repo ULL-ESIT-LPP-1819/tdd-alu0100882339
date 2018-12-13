@@ -288,38 +288,7 @@ end
       end
       
       
-      before :each do
-        @lista_2 = Lista.new()
-        @etiqueta_1 = EIN.new("Galleta",70.0,20.0,260.0,90.0,50.0,6.0,20, 5)
-        @etiqueta_2 = EIN.new("Papas",80.0,20.0,260.0,90.0,50.0,0.0,20, 5)
-        #etiqueta_3 = EIN.new("Chocolate",80.0,20.0,260.0,90.0,50.0,0.0,20, 5)
-        @lista_2.set_head(@etiqueta_1)
-        @lista_2.set_head(@etiqueta_2)
-      end
-       
       
-      it "Prueba de collect" do
-        
-        
-         expect(@lista_2.collect{|i| i.to_s}).to eq(["Papas", "Galleta"])
-      end
-      
-      it "Prueba del select" do
-      
-        
-         expect(lista_2.select{|i| i.nombre.size < 6}).to eq([etiqueta_2.nombre])
-         #puts @lista_2.select{|i| i.nombre.size < 6}
-         #puts @etiqueta_2.nombre.size 
-         
-      
-      end
-      
-     # it "Prueba del max" do
-      
-      #  expect(lista_2.max).to eq(etiqueta_2.nombre)
-        #puts lista_2.max
-      
-      #end
     
     
     end 
@@ -449,6 +418,11 @@ end
         
           expect(paciente.is_a?Individuo).to eq(true)
         end
+         it "Debe terner un peso teórico ideal" do
+         
+          expect(paciente.peso_teorico_ideal).to eq(50)
+         end
+        
         
       end
       

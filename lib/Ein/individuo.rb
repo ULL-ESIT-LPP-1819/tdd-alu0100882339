@@ -1,5 +1,4 @@
 
-
 class Individuo
     attr_reader :nombre, :edad
     include Comparable
