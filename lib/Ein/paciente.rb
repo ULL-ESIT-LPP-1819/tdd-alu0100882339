@@ -11,6 +11,7 @@ class Paciente < Individuo
         @peso_teorico_ideal = calcular_peso_ideal
         @gasto_e_basal = calcular_gasto_e_basal
         @efecto_t = calcular_efecto_t
+        
     end
     
     

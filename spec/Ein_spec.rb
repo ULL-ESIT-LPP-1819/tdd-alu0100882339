@@ -433,6 +433,10 @@ end
           expect(paciente.efecto_t).to eq(155.15)
          end
         
+          it "Gasto de actividad física" do
+          
+           expect(paciente.gasto_a_fisica).to eq(1551.5)
+          end
         
       end
       
