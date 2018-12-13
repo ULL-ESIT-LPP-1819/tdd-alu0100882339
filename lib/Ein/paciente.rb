@@ -1,7 +1,7 @@
 
 
 class Paciente < Individuo
-    attr_reader :peso, :talla, :sexo, :peso_teorico_ideal
+    attr_reader :peso, :talla, :sexo, :peso_teorico_ideal, :gasto_e_basal
     
     def initialize(nombre, edad, peso, talla, sexo)
         super(nombre, edad)
@@ -9,6 +9,7 @@ class Paciente < Individuo
         @talla = talla
         @sexo = sexo
         @peso_teorico_ideal = calcular_peso_ideal
+        @gasto_e_basal = calcular_gasto_e_basal
     end
     
     
@@ -23,6 +24,16 @@ class Paciente < Individuo
         talla_i = @talla * 100
         
         ((talla_i - 150) * 0.75 + 50).round(2)    
+    end
+    
+    def calcular_gasto_e_basal
+        talla_i = @talla * 100
+        if(@sexo == "Mujer")
+            (10*@peso)+(6.25*talla_i) - (5*@edad) - 161
+        else
+            (10*@peso)+(6.25*talla_i) - (5*@edad) - 5
+        end
+    
     end
     
     def clasificar_imc
