@@ -10,6 +10,7 @@ class Paciente < Individuo
         @sexo = sexo
         @peso_teorico_ideal = calcular_peso_ideal
         @gasto_e_basal = calcular_gasto_e_basal
+        
     end
     
     
@@ -29,9 +30,9 @@ class Paciente < Individuo
     def calcular_gasto_e_basal
         talla_i = @talla * 100
         if(@sexo == "Mujer")
-            (10*@peso)+(6.25*talla_i) - (5*@edad) - 161
+            ((10*@peso)+(6.25*talla_i) - (5*@edad) - 161).round(2)
         else
-            (10*@peso)+(6.25*talla_i) - (5*@edad) - 5
+            ((10*@peso)+(6.25*talla_i) - (5*@edad) - 5).round(2)
         end
     
     end

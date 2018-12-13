@@ -427,6 +427,11 @@ end
          
           expect(paciente.gasto_e_basal).to eq(1551.5)
          end
+         
+         it "Debe tener un efecto termógeno" do
+         
+          expect(paciente.efecto_t).to eq(155.15)
+         end
         
         
       end
