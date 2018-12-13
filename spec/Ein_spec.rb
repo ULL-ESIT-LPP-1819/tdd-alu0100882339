@@ -437,6 +437,11 @@ end
           
            expect(paciente.gasto_a_fisica("Reposo")).to eq(0.0)
           end
+          
+          it "Gasto energético total" do
+          
+            expect(paciente.gasto_e_total).to eq(1706.65)
+          end
         
       end
       
