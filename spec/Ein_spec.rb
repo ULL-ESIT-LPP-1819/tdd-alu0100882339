@@ -440,7 +440,7 @@ end
           
           it "Gasto energético total" do
           
-            expect(paciente.gasto_e_total).to eq(1706.65)
+            expect(paciente.gasto_e_total("Reposo")).to eq(1706.65)
           end
         
       end

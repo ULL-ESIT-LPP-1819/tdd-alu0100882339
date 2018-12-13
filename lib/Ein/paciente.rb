@@ -58,6 +58,11 @@ class Paciente < Individuo
     
     end
     
+    def gasto_e_total(actividad)
+    
+       ( @gasto_e_basal + @efecto_t + gasto_a_fisica(actividad)).round(2)
+    end
+    
     def clasificar_imc
         imc = calcular_imc
         
