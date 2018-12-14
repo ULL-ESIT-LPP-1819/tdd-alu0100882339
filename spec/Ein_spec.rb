@@ -475,7 +475,7 @@ end
         
         end
         
-        it "Prueba menú 2" do
+        it "Prueba menú2" do
         
             
             
