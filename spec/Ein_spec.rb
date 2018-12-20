@@ -555,7 +555,7 @@ end
               end
             end
 
-           
+     
           end
         
         #puts "ordenado"
@@ -563,6 +563,40 @@ end
           
          #   puts @menus_ordenados[k].collect{|y| y.valor_e_kc}.reduce(:+)
         #  end
+        end
+        
+        
+        it "Prueba usando bucles for para los pacientes" do
+          
+          @pacientes_ordenados = [@paciente_1]
+          @ordenar = 0.0
+          
+          for i in 0..9
+          
+            @head = @pacientes.get_head.value
+            @ordenar =  @head.gasto_e_total("Reposo")
+            #puts @ordenar
+            
+            for j in 0..i
+            
+              if @ordenar < @pacientes_ordenados[j].gasto_e_total("Reposo")
+                @pacientes_ordenados.insert(j,@head)
+                break
+              end
+              
+              if j== i
+                  @pacientes_ordenados.insert(j,@head)
+              end
+            end
+          end
+          
+          #puts "ordenado"
+          #for k in 0..9
+          
+           # puts @pacientes_ordenados[k].gasto_e_total("Reposo")
+          #end
+        
+        
         end
       
       end
