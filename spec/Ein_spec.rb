@@ -492,6 +492,10 @@ end
             @pacientes.set_head(@paciente_8)
             @pacientes.set_head(@paciente_9)
             @pacientes.set_head(@paciente_10)
+            
+            @head1 = @pacientes.head
+            
+            
         end
       
       
@@ -574,6 +578,7 @@ end
           for i in 0..9
           
             @head = @pacientes.get_head.value
+            
             @ordenar =  @head.gasto_e_total("Reposo")
             #puts @ordenar
             
@@ -590,11 +595,13 @@ end
             end
           end
           
-          #puts "ordenado"
+         # puts "ordenado"
           #for k in 0..9
           
            # puts @pacientes_ordenados[k].gasto_e_total("Reposo")
-          #end
+        #  end
+          
+          
         
         
         end
@@ -631,6 +638,44 @@ end
         
         
         end
+        it " Prueba usando each para ordenar los pacientes" do
+        
+          @pacientes_ordenados = [@paciente_1]
+          @ordenar = 0.0
+          @pacientes.head = @head1
+          
+          (0..9).each do
+            |i|
+          
+            @head = @pacientes.get_head.value
+            
+            @ordenar =  @head.gasto_e_total("Reposo")
+            #puts @ordenar
+            
+            (0..i).each do
+              |j|
+            
+              if @ordenar < @pacientes_ordenados[j].gasto_e_total("Reposo")
+                @pacientes_ordenados.insert(j,@head)
+                break
+              end
+              
+              if j== i
+                  @pacientes_ordenados.insert(j,@head)
+              end
+            end
+          end
+          
+         # puts "ordenado"
+          #for k in 0..9
+          
+         #   puts @pacientes_ordenados[k].gasto_e_total("Reposo")
+         # end
+        
+        end
+        
+        
+
       
       end
       
