@@ -467,6 +467,7 @@ end
             @menu9 = [@etiqueta_3, @etiqueta_5]
             @menu10 = [@etiqueta_4, @etiqueta_2]
             
+            @menus = [@menu1,@menu2,@menu3,@menu4,@menu5,@menu6,@menu7,@menu8,@menu9,@menu10]
             @gasto_total = paciente.gasto_e_total("Reposo")
             
         end
