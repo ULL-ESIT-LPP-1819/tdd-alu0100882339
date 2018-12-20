@@ -598,6 +598,39 @@ end
         
         
         end
+        
+        it "Prueba usando each para los menús" do
+        
+        
+         @menus_ordenados= [@menu1]
+            @ordenar = 0.0
+          (0..9).each do
+            |i|
+            @ordenar = @menus[i].collect{|j| j.valor_e_kc}.reduce(:+)
+            #puts @ordenar
+            (0..i).each do
+              |j|
+              if @ordenar < @menus_ordenados[j].collect{|k| k.valor_e_kc}.reduce(:+) 
+                @menus_ordenados.insert(j,@menus[i])
+                break
+              end
+              
+              if j== i
+                  @menus_ordenados.insert(j,@menus[i])
+              end
+            end
+
+     
+          end
+        
+        #puts "ordenado"
+         # for k in 0..9
+          
+          #  puts @menus_ordenados[k].collect{|y| y.valor_e_kc}.reduce(:+)
+        #  end
+        
+        
+        end
       
       end
       
