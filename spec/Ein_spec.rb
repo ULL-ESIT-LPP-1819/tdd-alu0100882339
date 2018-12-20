@@ -475,12 +475,23 @@ end
             @paciente_3 = Paciente.new("Maria", 20, 95, 1.70, "Mujer")
             @paciente_4 = Paciente.new("Miguel", 60, 80, 1.60, "Hombre")
             @paciente_5 = Paciente.new("Julia", 44, 50, 1.60, "Mujer")
-            @paciente_1 = Paciente.new("Gabriel", 38, 70, 1.85, "Hombre")
-            @paciente_1 = Paciente.new("Carmen", 50, 85, 1.45, "Mujer")
-            @paciente_1 = Paciente.new("Juan", 29, 78, 1.76, "Hombre")
-            @paciente_1 = Paciente.new("Sofia", 25, 93, 1.60, "Mujer")
-            @paciente_1 = Paciente.new("Adrian", 15, 85, 1.60, "Hombre")
+            @paciente_6 = Paciente.new("Gabriel", 38, 70, 1.85, "Hombre")
+            @paciente_7 = Paciente.new("Carmen", 50, 85, 1.45, "Mujer")
+            @paciente_8 = Paciente.new("Juan", 29, 78, 1.76, "Hombre")
+            @paciente_9 = Paciente.new("Sofia", 25, 93, 1.60, "Mujer")
+            @paciente_10 = Paciente.new("Adrian", 15, 85, 1.60, "Hombre")
             
+            @pacientes = Lista.new()
+            @pacientes.set_head(@paciente_1)
+            @pacientes.set_head(@paciente_2)
+            @pacientes.set_head(@paciente_3)
+            @pacientes.set_head(@paciente_4)
+            @pacientes.set_head(@paciente_5)
+            @pacientes.set_head(@paciente_6)
+            @pacientes.set_head(@paciente_7)
+            @pacientes.set_head(@paciente_8)
+            @pacientes.set_head(@paciente_9)
+            @pacientes.set_head(@paciente_10)
         end
       
       
