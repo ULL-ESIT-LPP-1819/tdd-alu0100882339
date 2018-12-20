@@ -457,7 +457,7 @@ end
             @etiqueta_5 = EIN.new("Chocolate",55.0,13.0,200.0,80.0,50.0,4.0,20, 5)
             
             @menu1 = [@etiqueta_1, @etiqueta_2]
-            @menu2 = [@etiqueta_3, @etiqueta_4, @etiqueta_5]
+            @menu2 = [@etiqueta_3, @etiqueta_4]
             @menu3 = [@etiqueta_5, @etiqueta_1]
             @menu4 = [@etiqueta_2, @etiqueta_3]
             @menu5 = [@etiqueta_4, @etiqueta_5]
@@ -507,7 +507,7 @@ end
         
             
             
-            expect( @menu2.collect{|i| i.valor_e_kc}.reduce(:+)).to be > @gasto_total
+            expect( @menu2.collect{|i| i.valor_e_kc}.reduce(:+)).to be < @gasto_total
         
         end
         
@@ -533,6 +533,36 @@ end
           
           expect( @menu5.collect{|i| i.valor_e_kc}.reduce(:+)).to be > @gasto_total
         
+        end
+        
+        it "Prueba usando bucles for para los menús" do
+        
+            @menus_ordenados= [@menu1]
+            @ordenar = 0.0
+          for i in 0..9
+            
+            @ordenar = @menus[i].collect{|j| j.valor_e_kc}.reduce(:+)
+            #puts @ordenar
+            for j in 0..i
+            
+              if @ordenar < @menus_ordenados[j].collect{|k| k.valor_e_kc}.reduce(:+) 
+                @menus_ordenados.insert(j,@menus[i])
+                break
+              end
+              
+              if j== i
+                  @menus_ordenados.insert(j,@menus[i])
+              end
+            end
+
+           
+          end
+        
+        #puts "ordenado"
+        #  for k in 0..9
+          
+         #   puts @menus_ordenados[k].collect{|y| y.valor_e_kc}.reduce(:+)
+        #  end
         end
       
       end
