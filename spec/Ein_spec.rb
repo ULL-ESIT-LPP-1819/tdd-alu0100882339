@@ -595,11 +595,11 @@ end
             end
           end
           
-         # puts "ordenado"
-          #for k in 0..9
+        #puts "ordenado"
+         # for k in 0..9
           
-           # puts @pacientes_ordenados[k].gasto_e_total("Reposo")
-        #  end
+          #  puts @pacientes_ordenados[k].gasto_e_total("Reposo")
+          #end
           
           
         
@@ -671,6 +671,20 @@ end
           
          #   puts @pacientes_ordenados[k].gasto_e_total("Reposo")
          # end
+        
+        end
+        
+        it "Prueba usando sort para ordenar los menús" do
+        
+          @menus_ordenados = @menus.sort{|x,y| x.collect{|i| i.valor_e_kc}.reduce(:+) <=> y.collect{|i| i.valor_e_kc}.reduce(:+) }
+        
+          #for k in 0..9
+           
+           
+           #puts @menus_ordenados[k].collect{|y| y.valor_e_kc}.reduce(:+)
+          #end
+         
+         
         
         end
         
