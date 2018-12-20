@@ -470,6 +470,17 @@ end
             @menus = [@menu1,@menu2,@menu3,@menu4,@menu5,@menu6,@menu7,@menu8,@menu9,@menu10]
             @gasto_total = paciente.gasto_e_total("Reposo")
             
+            @paciente_1 = Paciente.new("Ana", 35, 95, 1.50, "Mujer")
+            @paciente_2 = Paciente.new("Pedro", 50, 100, 2.00, "Hombre")
+            @paciente_3 = Paciente.new("Maria", 20, 95, 1.70, "Mujer")
+            @paciente_4 = Paciente.new("Miguel", 60, 80, 1.60, "Hombre")
+            @paciente_5 = Paciente.new("Julia", 44, 50, 1.60, "Mujer")
+            @paciente_1 = Paciente.new("Gabriel", 38, 70, 1.85, "Hombre")
+            @paciente_1 = Paciente.new("Carmen", 50, 85, 1.45, "Mujer")
+            @paciente_1 = Paciente.new("Juan", 29, 78, 1.76, "Hombre")
+            @paciente_1 = Paciente.new("Sofia", 25, 93, 1.60, "Mujer")
+            @paciente_1 = Paciente.new("Adrian", 15, 85, 1.60, "Hombre")
+            
         end
       
       
