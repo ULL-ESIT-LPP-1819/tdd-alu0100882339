@@ -540,60 +540,64 @@ end
         end
         
         it "Prueba usando bucles for para los menús" do
-        
+          Benchmark.bm do |x|
+          x.report("for menús"){
             @menus_ordenados= [@menu1]
             @ordenar = 0.0
-          for i in 0..9
+            for i in 0..9
             
-            @ordenar = @menus[i].collect{|j| j.valor_e_kc}.reduce(:+)
-            #puts @ordenar
-            for j in 0..i
+              @ordenar = @menus[i].collect{|j| j.valor_e_kc}.reduce(:+)
+              #puts @ordenar
+              for j in 0..i
             
-              if @ordenar < @menus_ordenados[j].collect{|k| k.valor_e_kc}.reduce(:+) 
-                @menus_ordenados.insert(j,@menus[i])
-                break
-              end
-              
-              if j== i
+                if @ordenar < @menus_ordenados[j].collect{|k| k.valor_e_kc}.reduce(:+) 
                   @menus_ordenados.insert(j,@menus[i])
+                  break
+                end
+              
+                if j== i
+                  @menus_ordenados.insert(j,@menus[i])
+                end
               end
-            end
-
+          
      
-          end
-        
+            end
+          
         #puts "ordenado"
         #  for k in 0..9
           
          #   puts @menus_ordenados[k].collect{|y| y.valor_e_kc}.reduce(:+)
         #  end
+          }end  
         end
         
         
         it "Prueba usando bucles for para los pacientes" do
           
-          @pacientes_ordenados = [@paciente_1]
-          @ordenar = 0.0
+          Benchmark.bm do |x|
+          x.report("for pacientes"){
+            @pacientes_ordenados = [@paciente_1]
+            @ordenar = 0.0
           
-          for i in 0..9
+            for i in 0..9
           
-            @head = @pacientes.get_head.value
+              @head = @pacientes.get_head.value
             
-            @ordenar =  @head.gasto_e_total("Reposo")
-            #puts @ordenar
+              @ordenar =  @head.gasto_e_total("Reposo")
+              #puts @ordenar
             
-            for j in 0..i
+              for j in 0..i
             
-              if @ordenar < @pacientes_ordenados[j].gasto_e_total("Reposo")
-                @pacientes_ordenados.insert(j,@head)
-                break
-              end
-              
-              if j== i
+                if @ordenar < @pacientes_ordenados[j].gasto_e_total("Reposo")
                   @pacientes_ordenados.insert(j,@head)
+                  break
+                end
+              
+                if j== i
+                  @pacientes_ordenados.insert(j,@head)
+                end
               end
             end
-          end
           
         #puts "ordenado"
          # for k in 0..9
@@ -601,14 +605,15 @@ end
           #  puts @pacientes_ordenados[k].gasto_e_total("Reposo")
           #end
           
-          
+            }end 
         
         
         end
         
         it "Prueba usando each para los menús" do
         
-        
+         Benchmark.bm do |x|
+         x.report("each menús"){
          @menus_ordenados= [@menu1]
             @ordenar = 0.0
           (0..9).each do
@@ -635,11 +640,12 @@ end
           
           #  puts @menus_ordenados[k].collect{|y| y.valor_e_kc}.reduce(:+)
         #  end
-        
+         }end
         
         end
         it " Prueba usando each para ordenar los pacientes" do
-        
+         Benchmark.bm do |x|
+         x.report("each pacientes"){
           @pacientes_ordenados = [@paciente_1]
           @ordenar = 0.0
           @pacientes.head = @head1
@@ -671,11 +677,12 @@ end
           
          #   puts @pacientes_ordenados[k].gasto_e_total("Reposo")
          # end
-        
+         }end
         end
         
         it "Prueba usando sort para ordenar los menús" do
-        
+         Benchmark.bm do |x|
+         x.report("sort menús"){
           @menus_ordenados = @menus.sort{|x,y| x.collect{|i| i.valor_e_kc}.reduce(:+) <=> y.collect{|i| i.valor_e_kc}.reduce(:+) }
         
           #for k in 0..9
@@ -684,9 +691,25 @@ end
            #puts @menus_ordenados[k].collect{|y| y.valor_e_kc}.reduce(:+)
           #end
          
-         
+         }end
         
         end
+        
+       # it "Prueba usando el sort para ordenar los pacientes" do
+       #Benchmark.bm do |x|
+       #x.report("sort pacientes"){
+        #  @pacientes_ordenados = @pacientes.sort{|x,y| x.gasto_e_total("Reposo") <=> y.gasto_e_total("Reposo")}
+          
+          #@pacientes_ordenados = @pacientes.sort{|x,y| x.gasto_e_total("Reposo") <=> y.gasto_e_total("Reposo") }
+          
+          
+        # for k in 0..9
+          
+         #  puts @pacientes_ordenados[k].gasto_e_total("Reposo")
+         #end
+          
+        #}end
+      #  end
         
         
 
