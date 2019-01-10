@@ -695,21 +695,22 @@ end
         
         end
         
-       # it "Prueba usando el sort para ordenar los pacientes" do
-       #Benchmark.bm do |x|
-       #x.report("sort pacientes"){
-        #  @pacientes_ordenados = @pacientes.sort{|x,y| x.gasto_e_total("Reposo") <=> y.gasto_e_total("Reposo")}
+        it "Prueba usando el sort para ordenar los pacientes" do
+       Benchmark.bm do |x|
+       x.report("sort pacientes"){
+          @pacientes.head = @head1
+          @pacientes_ordenados = @pacientes.sort{|x,y| x.gasto_e_total("Reposo") <=> y.gasto_e_total("Reposo")}
           
           #@pacientes_ordenados = @pacientes.sort{|x,y| x.gasto_e_total("Reposo") <=> y.gasto_e_total("Reposo") }
           
           
-        # for k in 0..9
+         #for k in 0..9
           
-         #  puts @pacientes_ordenados[k].gasto_e_total("Reposo")
+          #puts @pacientes_ordenados[k].gasto_e_total("Reposo")
          #end
           
-        #}end
-      #  end
+        }end
+        end
         
         
 
