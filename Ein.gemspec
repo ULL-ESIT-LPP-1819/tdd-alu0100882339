@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "Ein"
   spec.version       = Ein::VERSION
   spec.authors       = ["alu0100882339"]
-  spec.email         = ["arianezf@gmail.com"]
+  spec.email         = ["alu0100882339@ull.edu.es"]
 
   spec.summary       = %q{"Gema de la práctica 6"}
   spec.description   = %q{"Gema de la práctica 6: Desarrollo Dirigido por Pruebas(TDD)"}
