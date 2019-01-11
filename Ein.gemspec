@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "Ein/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "Ein"
+  spec.name          = "alu0100882339menu"
   spec.version       = Ein::VERSION
   spec.authors       = ["alu0100882339"]
   spec.email         = ["alu0100882339@ull.edu.es"]
